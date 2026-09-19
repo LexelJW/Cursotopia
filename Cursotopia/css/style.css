@@ -1,13 +1,12 @@
 :root {
-  /* Paleta Verde Elegante y Oscura (Sin Blanco Genérico) */
-  --primary: #00e699;         /* Menta Neón para botones y destacados */
-  --primary-dark: #00b377;    /* Menta oscuro para hovers */
-  --bg-main: #0a2e23;         /* Fondo verde esmeralda profundo */
-  --bg-card: #123e30;         /* Fondo de tarjetas verde bosque */
-  --bg-card-hover: #195240;   /* Hover en tarjetas */
-  --text-main: #e6f4f0;       /* Texto menta claro (sin blanco puro) */
-  --text-muted: #8eb3a6;      /* Texto secundario */
-  --line: #1b5241;            /* Bordes y divisiones */
+  --primary: #00e699;         
+  --primary-dark: #00b377;    
+  --bg-main: #0a2e23;         
+  --bg-card: #123e30;         
+  --bg-card-hover: #195240;   
+  --text-main: #e6f4f0;       
+  --text-muted: #8eb3a6;      
+  --line: #1b5241;            
   --danger: #ff5252;
   --success: #00e699;
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
@@ -15,7 +14,7 @@
 
 * { 
   box-sizing: border-box; 
-  border-radius: 0 !important; /* REGLA: Esquinas totalmente puntiagudas en todo */
+  border-radius: 0 !important; 
 }
 
 body { 
@@ -31,7 +30,6 @@ button { cursor: pointer; border: 0; }
 
 .container { width: min(1160px, calc(100% - 36px)); margin: auto; }
 
-/* Navbar Superior (Verde Oscuro Elegante) */
 .navbar { 
   height: 72px; 
   background: #061f18; 
@@ -62,10 +60,8 @@ button { cursor: pointer; border: 0; }
 .nav-link { color: var(--text-main); }
 .nav-link:hover { color: var(--primary); }
 
-/* Páginas & Secciones */
 .page { padding: 30px 0 60px; }
 
-/* Hero Banner con Gradiente Verde Elegante */
 .hero { 
   background: linear-gradient(135deg, #0e3b2e, #061f18); 
   border: 1px solid var(--line); 
@@ -82,7 +78,6 @@ button { cursor: pointer; border: 0; }
 .hero-art { display: grid; place-items: center; }
 .hero-card { max-width: 240px; width: 100%; height: auto; display: block; filter: drop-shadow(0 10px 15px rgba(0,0,0,0.5)); }
 
-/* Cuadrículas & Tarjetas */
 .section-head { display: flex; justify-content: space-between; align-items: flex-end; margin: 40px 0 20px; border-bottom: 2px solid var(--line); padding-bottom: 10px; }
 .section-head h2 { color: var(--primary); margin: 0; font-size: 24px; }
 
@@ -107,7 +102,6 @@ button { cursor: pointer; border: 0; }
 .rating { color: #ffb703; }
 .card-footer { display: flex; justify-content: space-between; align-items: center; color: var(--text-muted); font-size: 13px; border-top: 1px solid var(--line); padding-top: 12px; }
 
-/* Botones */
 .btn { 
   padding: 10px 20px; 
   font-weight: bold; 
@@ -128,7 +122,6 @@ button { cursor: pointer; border: 0; }
 .btn-sm { padding: 8px 14px; font-size: 12px; }
 .full { width: 100%; display: block; }
 
-/* Formulario */
 .field { margin-bottom: 16px; }
 .field label { display: block; font-size: 13px; font-weight: bold; margin-bottom: 6px; color: var(--text-muted); text-transform: uppercase; }
 .field input, .field select, .field textarea { 
@@ -142,7 +135,6 @@ button { cursor: pointer; border: 0; }
 }
 .field input:focus, .field select:focus { border-color: var(--primary); }
 
-/* Pantallas de Autenticación (Login / Registro) */
 .auth-page { 
   min-height: calc(100vh - 72px); 
   display: grid; 
@@ -150,7 +142,6 @@ button { cursor: pointer; border: 0; }
   background: linear-gradient(135deg, #061f18 0%, #0a2e23 50%, #041410 100%); 
   padding: 20px; 
 }
-/* Sin tarjeta blanca flotante: Formulario integrado totalmente oscuro */
 .auth-card { 
   width: min(420px, 100%); 
   background: var(--bg-card); 
@@ -165,18 +156,15 @@ button { cursor: pointer; border: 0; }
 .auth-footer a:hover { text-decoration: underline; }
 .error-msg { color: var(--danger); font-size: 12px; margin-top: 10px; display: block; text-align: center; }
 
-/* Tablas */
 .table-wrap { background: var(--bg-card); border: 1px solid var(--line); overflow-x: auto; }
 table { width: 100%; border-collapse: collapse; text-align: left; }
 th, td { padding: 14px 18px; border-bottom: 1px solid var(--line); font-size: 14px; color: var(--text-main); }
 th { background: #061f18; color: var(--primary); text-transform: uppercase; font-size: 12px; letter-spacing: 0.5px; }
 
-/* Badges */
 .badge { display: inline-block; padding: 4px 10px; font-size: 11px; font-weight: bold; text-transform: uppercase; }
 .badge.green { background: rgba(0, 230, 153, 0.15); color: var(--primary); border: 1px solid var(--primary); }
 .badge.purple { background: rgba(142, 179, 166, 0.15); color: var(--text-muted); border: 1px solid var(--text-muted); }
 
-/* Diploma */
 .diploma-box { 
   max-width: 750px; 
   margin: 30px auto; 

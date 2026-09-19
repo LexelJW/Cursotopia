@@ -1,4 +1,3 @@
-// Manejo de Registro con Expresión Regular y Persistencia de Sesión
 function validarRegistro(event) {
   event.preventDefault();
   
@@ -13,7 +12,6 @@ function validarRegistro(event) {
     return false;
   }
 
-  // Regla Rúbrica: Mínimo 8 caracteres, 1 mayúscula, 1 número y 1 carácter especial
   const regexPassword = /^(?=.*[A-Z])(?=.*\d)(?=.*[$("@"#$%\&\&=?;:;,.+\-*\{\]B)]).{8,}$/;
 
   if (!regexPassword.test(password)) {
@@ -21,7 +19,6 @@ function validarRegistro(event) {
     return false;
   }
 
-  // Guardar datos de usuario registrado
   const usuario = { name: nombre, email: email, role: role };
   localStorage.setItem('usuario_sesion', JSON.stringify(usuario));
 
@@ -32,7 +29,6 @@ function validarRegistro(event) {
   return true;
 }
 
-// Manejo de Inicio de Sesión
 function validarLogin(event) {
   event.preventDefault();
   const email = document.getElementById('login-email').value.trim();
@@ -44,7 +40,6 @@ function validarLogin(event) {
     return false;
   }
 
-  // Si no hay un usuario registrado previo, se crea un perfil por defecto basado en el email
   let usuario = JSON.parse(localStorage.getItem('usuario_sesion'));
   if (!usuario) {
     usuario = { name: email.split('@')[0], email: email, role: 'student' };
@@ -57,7 +52,6 @@ function validarLogin(event) {
   return true;
 }
 
-// Redirección centralizada según el rol del usuario
 function redirigirPorRol(role) {
   if (role === 'teacher') {
     window.location.href = 'instructor.html';
@@ -68,13 +62,11 @@ function redirigirPorRol(role) {
   }
 }
 
-// Cerrar Sesión
 function cerrarSesion() {
   localStorage.removeItem('usuario_sesion');
   window.location.href = 'index.html';
 }
 
-// Cargar estado de la barra de navegación según la sesión activa
 document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.getElementById('nav-dynamic-links');
   if (!navLinks) return;
