@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crear Cuenta - Cursotopia</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a class="brand" href="index.html"><span class="brand-mark">C</span>Cursotopia</a>
+    </div>
+  </nav>
+
+  <main class="auth-page">
+    <form class="auth-card" id="register-form" onsubmit="return validarRegistro(event)">
+      <h1>Registro</h1>
+      <hr>
+      <div class="field">
+        <label for="reg-name">Nombre completo</label>
+        <input id="reg-name" type="text" required placeholder="Ej. Juan Pérez">
+      </div>
+      <div class="field">
+        <label for="reg-email">Correo electrónico</label>
+        <input id="reg-email" type="email" required placeholder="correo@ejemplo.com">
+      </div>
+      <div class="field">
+        <label for="reg-password">Contraseña</label>
+        <input id="reg-password" type="password" required placeholder="••••••••">
+        <small style="color: var(--text-muted); font-size: 11px; display: block; margin-top: 6px;">
+          Requisito: Mínimo 8 caracteres, 1 mayúscula, 1 número y 1 carácter especial ($#%...)
+        </small>
+      </div>
+      <div class="field">
+        <label for="reg-role">Tipo de usuario</label>
+        <select id="reg-role">
+          <option value="student">Alumno</option>
+          <option value="teacher">Profesor / Instructor</option>
+          <option value="admin">Administrador</option>
+        </select>
+      </div>
+      <button class="btn btn-primary full" type="submit">Registrarme</button>
+      <span id="mensaje-error" class="error-msg"></span>
+      <div class="auth-footer">
+        ¿Ya tienes cuenta? <a href="login.html">Inicia sesión</a>
+      </div>
+    </form>
+  </main>
+
+  <script src="js/validaciones.js"></script>
+</body>
+</html>

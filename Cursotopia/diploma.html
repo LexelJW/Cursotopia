@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diploma de Finalización - Cursotopia</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a class="brand" href="estudiante.html"><span class="brand-mark">C</span>Cursotopia</a>
+      <div class="nav-links">
+        <a class="nav-link" href="kardex.html">Volver al Kardex</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="page">
+    <div class="container">
+      <div class="diploma-box">
+        <h3 style="color: var(--text-muted); text-transform: uppercase; letter-spacing: 2px; margin: 0;">Reconocimiento Académico</h3>
+        <h1 style="font-size: 36px; color: var(--primary); margin: 15px 0 5px;">CURSOTOPIA</h1>
+        <p style="font-size: 14px; color: var(--text-muted);">Otorga el presente certificado a:</p>
+        
+        <!-- Nombre cargado por JS dinámicamente -->
+        <h2 id="diploma-nombre-alumno" style="font-size: 28px; text-decoration: underline; margin: 20px 0; color: #ffffff;">Cargando...</h2>
+        
+        <p style="font-size: 16px; max-width: 80%; margin: 0 auto 20px;">
+          Por haber concluido satisfactoriamente el curso <strong>"Introducción a Animación 3D"</strong> con un avance del 100%.
+        </p>
+
+        <div style="display: flex; justify-content: space-around; margin-top: 40px; border-top: 1px solid var(--line); padding-top: 20px;">
+          <div>
+            <strong style="display:block; color:#fff;">Prof. Hugo Cavazos</strong>
+            <small style="color: var(--text-muted);">Instructor del Curso</small>
+          </div>
+          <div>
+            <strong style="display:block; color:#fff;">19/09/2026</strong>
+            <small style="color: var(--text-muted);">Fecha de Finalización</small>
+          </div>
+        </div>
+
+        <div style="margin-top: 30px;">
+          <button class="btn btn-primary" onclick="window.print()">Imprimir / Guardar PDF</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const usuario = JSON.parse(localStorage.getItem('usuario_sesion'));
+      const elNombre = document.getElementById('diploma-nombre-alumno');
+      if (usuario && usuario.name) {
+        elNombre.innerText = usuario.name;
+      } else {
+        elNombre.innerText = "Alumno Registrado";
+      }
+    });
+  </script>
+</body>
+</html>

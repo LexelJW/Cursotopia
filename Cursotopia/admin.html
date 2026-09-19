@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel Administrador - Cursotopia</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a class="brand" href="admin.html"><span class="brand-mark">C</span>Cursotopia</a>
+      <div class="nav-links">
+        <a class="nav-link" href="index.html">Ver Catálogo</a>
+        <button class="btn btn-outline btn-sm" onclick="cerrarSesion()">Cerrar Sesión</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="page">
+    <div class="container">
+      <div class="section-head">
+        <h2>Panel de Control del Administrador</h2>
+      </div>
+
+      <div class="grid" style="margin-bottom: 30px;">
+        <div class="course-card" style="padding: 20px; text-align: center;">
+          <h3 style="margin: 0; font-size: 32px; color: var(--primary);">128</h3>
+          <p style="margin: 5px 0 0; color: var(--text-muted);">Usuarios Registrados</p>
+        </div>
+        <div class="course-card" style="padding: 20px; text-align: center;">
+          <h3 style="margin: 0; font-size: 32px; color: var(--primary);">24</h3>
+          <p style="margin: 5px 0 0; color: var(--text-muted);">Cursos Publicados</p>
+        </div>
+        <div class="course-card" style="padding: 20px; text-align: center;">
+          <h3 style="margin: 0; font-size: 32px; color: var(--primary);">$45,200</h3>
+          <p style="margin: 5px 0 0; color: var(--text-muted);">Ventas Totales</p>
+        </div>
+      </div>
+
+      <h3 style="color: var(--primary);">Gestión de Cursos y Contenidos</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Curso</th>
+              <th>Instructor</th>
+              <th>Estatus</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#101</td>
+              <td>Introducción al Dibujo</td>
+              <td>Prof. Karim Pérez</td>
+              <td><span class="badge green">Aprobado</span></td>
+              <td><button class="btn btn-outline btn-sm">Desactivar</button></td>
+            </tr>
+            <tr>
+              <td>#102</td>
+              <td>Bases de Datos Multimedia</td>
+              <td>Prof. Karim Pérez</td>
+              <td><span class="badge green">Aprobado</span></td>
+              <td><button class="btn btn-outline btn-sm">Desactivar</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/validaciones.js"></script>
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cursotopia - Plataforma de Cursos</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .hero .btn-outline {
+      border-color: var(--primary);
+      color: var(--primary);
+      background: transparent;
+    }
+    .hero .btn-outline:hover {
+      background: var(--primary);
+      color: #041410;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- BARRA DE NAVEGACIÓN -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a class="brand" href="index.html"><span class="brand-mark">C</span>Cursotopia</a>
+      
+      <div class="nav-search">
+        <input type="text" placeholder="Buscar cursos por título, categoría o instructor...">
+        <button type="button">🔍</button>
+      </div>
+
+      <!-- Enlaces Dinámicos (Se actualizan según la sesión con JS) -->
+      <div class="nav-links" id="nav-dynamic-links">
+        <a class="nav-link" href="#catalogo">Explorar</a>
+        <a class="nav-link" href="login.html">Iniciar Sesión</a>
+        <a class="nav-link btn btn-primary btn-sm" href="registro.html">Registrarse</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="page">
+    <div class="container">
+      
+      <section class="hero">
+        <div>
+          <h1>Convierte tu curiosidad en habilidades.</h1>
+          <p>Descubre cursos prácticos impartidos por profesores capacitados.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="registro.html">Crear Cuenta</a>
+            <a class="btn btn-outline" href="#catalogo">Explorar Cursos</a>
+          </div>
+        </div>
+        <div class="hero-art">
+          <img src="img/logo.png" alt="Cursotopia" class="hero-card">
+        </div>
+      </section>
+
+      <div class="section-head" id="catalogo">
+        <h2>Catálogo de Cursos Disponibles</h2>
+      </div>
+
+      <div class="grid">
+
+  <!-- Curso 1 -->
+  <article class="course-card">
+    <div class="course-thumb-wrap">
+      <img src="img/dibujo.jpeg" alt="Introducción al Dibujo" class="course-img">
+    </div>
+    <div class="course-body">
+      <h3 class="course-title">Introducción al Dibujo</h3>
+      <div class="instructor">Prof. Karim Pérez</div>
+      <div class="price-row">
+        <span class="price">$79.99 MXN</span>
+        <span class="rating">★★★★★</span>
+      </div>
+      <div class="card-meta-row">
+        <span>Nivel 1</span>
+        <span>&lt; 1 hora</span>
+      </div>
+      <div class="card-footer">
+        <button onclick="InscribirCurso('Introducción al Dibujo')" class="btn btn-primary btn-sm full">INSCRIBIRME</button>
+      </div>
+    </div>
+  </article>
+
+  <!-- Curso 2 -->
+  <article class="course-card">
+    <div class="course-thumb-wrap">
+      <img src="img/foto.jpg" alt="Introducción a Fotografía" class="course-img">
+    </div>
+    <div class="course-body">
+      <h3 class="course-title">Introducción a Fotografía</h3>
+      <div class="instructor">Prof. Kevin Aguilar</div>
+      <div class="price-row">
+        <span class="price">$65.99 MXN</span>
+        <span class="no-reviews">Sin reseñas</span>
+      </div>
+      <div class="card-meta-row">
+        <span>Nivel 1</span>
+        <span>&lt; 1 hora</span>
+      </div>
+      <div class="card-footer">
+        <button onclick="InscribirCurso('Introducción a Fotografía')" class="btn btn-primary btn-sm full">INSCRIBIRME</button>
+      </div>
+    </div>
+  </article>
+
+  <!-- Curso 3 -->
+  <article class="course-card">
+    <div class="course-thumb-wrap">
+      <img src="img/cmasmas.png" alt="Introducción a C++" class="course-img">
+    </div>
+    <div class="course-body">
+      <h3 class="course-title">Introducción a C++</h3>
+      <div class="instructor">Prof. Álvaro Peña</div>
+      <div class="price-row">
+        <span class="price">$99.99 MXN</span>
+        <span class="no-reviews">Sin reseñas</span>
+      </div>
+      <div class="card-meta-row">
+        <span>Nivel 1</span>
+        <span>&lt; 1 hora</span>
+      </div>
+      <div class="card-footer">
+        <button onclick="InscribirCurso('Introducción a C++')" class="btn btn-primary btn-sm full">INSCRIBIRME</button>
+      </div>
+    </div>
+  </article>
+
+  <!-- Curso 4 -->
+  <article class="course-card">
+    <div class="course-thumb-wrap">
+      <img src="img/animacion3d.jpg" alt="Introducción a Animación 3D" class="course-img">
+    </div>
+    <div class="course-body">
+      <h3 class="course-title">Introducción a Animación 3D</h3>
+      <div class="instructor">Prof. Hugo Cavazos</div>
+      <div class="price-row">
+        <span class="price">$59.99 MXN</span>
+        <span class="rating">★★★★☆</span>
+      </div>
+      <div class="card-meta-row">
+        <span>Nivel 1</span>
+        <span>&lt; 1 hora</span>
+      </div>
+      <div class="card-footer">
+        <button onclick="InscribirCurso('Introducción a Animación 3D')" class="btn btn-primary btn-sm full">INSCRIBIRME</button>
+      </div>
+    </div>
+  </article>
+
+  <!-- Curso 5 -->
+  <article class="course-card">
+    <div class="course-thumb-wrap">
+      <!-- Verifica el nombre exacto de la imagen en tu carpeta img/ (ej. bd.png o bd.jpg) -->
+      <img src="img/bdm.jpg" alt="Bases de Datos Multimedia" class="course-img">
+    </div>
+    <div class="course-body">
+      <h3 class="course-title">Bases de Datos Multimedia</h3>
+      <div class="instructor">Prof. Juan Montoya</div>
+      <div class="price-row">
+        <span class="price">$119.98 MXN</span>
+        <span class="no-reviews">Sin reseñas</span>
+      </div>
+      <div class="card-meta-row">
+        <span>Nivel 2</span>
+        <span>2 horas</span>
+      </div>
+      <div class="card-footer">
+        <button onclick="InscribirCurso('Bases de Datos Multimedia')" class="btn btn-primary btn-sm full">INSCRIBIRME</button>
+      </div>
+    </div>
+  </article>
+
+  <!-- Curso 6 (Restablecido a la versión original) -->
+  <article class="course-card">
+    <div class="course-thumb-wrap">
+      <!-- Verifica el nombre de la imagen de modelado en tu carpeta img/ (ej. modelado.jpg, sketchup.jpg) -->
+      <img src="img/modelado.jpg" alt="Introducción a Modelado Arquitectónico" class="course-img">
+    </div>
+    <div class="course-body">
+      <h3 class="course-title">Introducción a Modelado Arquitectónico</h3>
+      <div class="instructor">Prof. Luis Morgan</div>
+      <div class="price-row">
+        <span class="price" style="color: var(--primary-bright);">Gratis</span>
+        <span class="rating">★★★★★</span>
+      </div>
+      <div class="card-meta-row">
+        <span>Nivel 1</span>
+        <span>&lt; 1 hora</span>
+      </div>
+      <div class="card-footer">
+        <button onclick="InscribirCurso('Introducción a Modelado Arquitectónico')" class="btn btn-primary btn-sm full">INSCRIBIRME</button>
+      </div>
+    </div>
+  </article>
+
+</div>
+    </div>
+  </main>
+
+  <script src="js/validaciones.js"></script>
+  <script>
+    function InscribirCurso(nombreCurso) {
+      const usuario = JSON.parse(localStorage.getItem('usuario_sesion'));
+      if (!usuario) {
+        alert('Debes iniciar sesión para inscribirte a un curso.');
+        window.location.href = 'login.html';
+      } else {
+        alert(`¡Inscripción exitosa a "${nombreCurso}"! Redirigiendo a tu panel...`);
+        redirigirPorRol(usuario.role);
+      }
+    }
+  </script>
+</body>
+</html>
